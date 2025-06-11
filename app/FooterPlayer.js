@@ -11,7 +11,7 @@ export default function FooterPlayer({
     setIsShuffling,
     isPlaying,
     setIsPlaying
-  }) {
+}) {
     const [progress, setProgress] = useState(0);
     const [duration, setDuration] = useState(0);
     const [volume, setVolume] = useState(1);
@@ -75,7 +75,7 @@ export default function FooterPlayer({
         const x = e.clientX; // global horizontal mouse position
         const percent = (x - rect.left) / rect.width;
         // Clamp value to 0–1 and apply
-        audio.currentTime = Math.min(1,percent) * audio.duration;
+        audio.currentTime = Math.min(1, percent) * audio.duration;
     };
 
 
@@ -85,21 +85,40 @@ export default function FooterPlayer({
     if (!track) return null;
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 px-4 py-2 z-50 shadow-md backdrop-blur-xs">
+        <div className="fixed bottom-0 left-0 right-0 px-4 py-2 z-50 shadow-md backdrop-blur-xs  select-none">
             <div className="flex items-center justify-between gap-4 flex-wrap">
+
+
+                {/* Controls */}
+                <div className="flex items-center gap-2 ">
+                    <button onClick={onPrev} title="Previous">«</button>
+                    <button
+                        onClick={togglePlay}
+                        title="Play/Pause"
+                        className="w-6 flex-auto -translate-x-px"
+                    >
+                        {isPlaying ? "||" : ">"}
+                    </button>
+
+                    <button onClick={onNext} title="Next">»</button>
+                </div>
+
+
+
+
                 {/* Track Info */}
                 <div className="flex-1 min-w-[200px]">
-                    <div className="font-medium truncate">
-                        {isPlaying?<AnimatedText content={track.title} />:track.title}
-                        </div>
+                    <div className="font-medium truncate mb-[2px]">
+                        {isPlaying ? <AnimatedText content={track.title} /> : track.title}
+                    </div>
                     <div
                         ref={progressBarRef}
-                        className="h-2 bg-gray-300 rounded cursor-pointer mt-1 w-full"
+                        className="h-2 border opacity-40 cursor-pointer w-full m-0"
                         onClick={seek}
                     >
 
                         <div
-                            className="h-2 bg-blue-500 rounded"
+                            className="h-2 bg-foreground"
                             style={{ width: `${(progress / (duration || 1)) * 100}%` }}
                         />
                     </div>
@@ -108,32 +127,18 @@ export default function FooterPlayer({
                     </div>
                 </div>
 
-                {/* Controls */}
-                <div className="flex items-center gap-2">
-                    <button onClick={onPrev} title="Previous">⏮️</button>
-                    <button
-                        onClick={togglePlay}
-                        title="Play/Pause"
-                        className="w-6 text-center"
-                    >
-                        {isPlaying ? "⏸" : "▶️"}
-                    </button>
-
-                    <button onClick={onNext} title="Next">⏭️</button>
-                    <button
-                        onClick={() => setIsShuffling((s) => !s)}
-                        title="Shuffle"
-                        className="ml-2 px-2 py-1 rounded text-sm w-[60px] text-center"
-                    >
-                        🔀 {isShuffling ? "On" : "Off"}
-                    </button>
-                </div>
-
-
+                <button
+                    onClick={() => setIsShuffling((s) => !s)}
+                    title="Shuffle"
+                    className={`mr-1 ml-1 ${isShuffling && 'font-semibold'}`}
+                >
+                    shuffle
+                </button>
                 {/* Volume */}
                 <div className="flex items-center gap-2 min-w-[120px]">
-                    🔊
+                    <label onClick={() => setVolume(volume !== 0 ? 0 : 1)}>vol</label>
                     <input
+                        className="volume opacity-40"
                         type="range"
                         min={0}
                         max={1}

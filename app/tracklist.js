@@ -2,15 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import FooterPlayer from "./FooterPlayer";
 import AnimatedText from "./AnimatedText";
 
-export default function TrackList() {
+export default function TrackList({ setIsLoading }) {
     const [tracks, setTracks] = useState([]);
     const [currentTrackIndex, setCurrentTrackIndex] = useState(null);
     const [isShuffling, setIsShuffling] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
     const [hoveredIndex, setHoveredIndex] = useState(null);
-
+    const [showIntroAnimation, setShowIntroAnimation] = useState(true);
     const audioRef = useRef(null);
-
 
     useEffect(() => {
         const loadManifest = async () => {
@@ -37,6 +36,8 @@ export default function TrackList() {
             );
 
             setTracks(withDurations);
+            if (typeof setIsLoading === "function") setIsLoading(false);
+            setShowIntroAnimation(false)
         };
 
         loadManifest();
@@ -72,6 +73,7 @@ export default function TrackList() {
 
     return (
         <>
+            {!showIntroAnimation && <AnimatedText className={isPlaying? 'animate-pulse self-end pr-3 font-mono tracking-wide':'self-end pr-3 font-mono tracking-wide'} />}
             <div className="grid w-full pb-24">
                 {tracks.map((track, index) => (
                     <button
@@ -79,7 +81,7 @@ export default function TrackList() {
                         onClick={() => playTrack(index)}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
-                        className={`grid grid-cols-[1fr_auto] gap-x-12 w-full text-left py-2 px-3 rounded hover:backdrop-blur-xs hover:font-semibold ${currentTrackIndex === index ? "backdrop-blur-xs font-semibold" : ""
+                        className={`grid grid-cols-[1fr_auto] gap-x-1 w-full text-left py-1 rounded ${index%2===0? "gradient":""} hover:backdrop-blur-xs hover:font-semibold ${currentTrackIndex === index ? "backdrop-blur-xs font-semibold animate-pulse" : ""
                             }`}
                     >
                         <span>
