@@ -109,7 +109,7 @@ export default function FooterPlayer({
                 {/* Track Info */}
                 <div className="flex-1 min-w-[200px]">
                     <div className="font-medium truncate mb-[2px]">
-                        {isPlaying ? <AnimatedText content={track.title} /> : track.title}
+                        {isPlaying ? <AnimatedText className='font-semibold' content={track.title} /> : track.title}
                     </div>
                     <div
                         ref={progressBarRef}
