@@ -1,11 +1,39 @@
 [
   {
+    "title": "AfterImageClubMASTER",
+    "file": "/audio/AfterImageClubMASTER.mp3"
+  },
+  {
+    "title": "BALLOONMASTER ",
+    "file": "/audio/BALLOONMASTER_.mp3"
+  },
+  {
+    "title": "Balloon",
+    "file": "/audio/Balloon.mp3"
+  },
+  {
+    "title": "Blanketmix5",
+    "file": "/audio/Blanketmix5.mp3"
+  },
+  {
     "title": "CloudStepper 18B",
     "file": "/audio/CloudStepper_18B.mp3"
   },
   {
+    "title": "CowBoss ",
+    "file": "/audio/CowBoss_.mp3"
+  },
+  {
     "title": "CowEvent",
     "file": "/audio/CowEvent.mp3"
+  },
+  {
+    "title": "DRUMPHASE",
+    "file": "/audio/DRUMPHASE.mp3"
+  },
+  {
+    "title": "Dopio ",
+    "file": "/audio/Dopio_.mp3"
   },
   {
     "title": "EighthDayOfTheWeek",
@@ -16,12 +44,48 @@
     "file": "/audio/EverydayIsEveryday.mp3"
   },
   {
+    "title": "FARDOPIO ",
+    "file": "/audio/FARDOPIO_.mp3"
+  },
+  {
+    "title": "FARDOPIO Fixed 1",
+    "file": "/audio/FARDOPIO_Fixed_1.mp3"
+  },
+  {
+    "title": "FMCLUB",
+    "file": "/audio/FMCLUB.mp3"
+  },
+  {
+    "title": "FORGIVENESSMIXED",
+    "file": "/audio/FORGIVENESSMIXED.mp3"
+  },
+  {
+    "title": "FarAway ",
+    "file": "/audio/FarAway_.mp3"
+  },
+  {
     "title": "Filmstrips",
     "file": "/audio/Filmstrips.mp3"
   },
   {
     "title": "FinalBallpit",
     "file": "/audio/FinalBallpit.mp3"
+  },
+  {
+    "title": "FloatingDownReflectiveBlackRiver  1",
+    "file": "/audio/FloatingDownReflectiveBlackRiver__1.mp3"
+  },
+  {
+    "title": "FloatingDownReflectiveBlackRiver  2",
+    "file": "/audio/FloatingDownReflectiveBlackRiver__2.mp3"
+  },
+  {
+    "title": "GashponDiamonds  1",
+    "file": "/audio/GashponDiamonds__1.mp3"
+  },
+  {
+    "title": "HolyDroneTempleHighAsShit  1",
+    "file": "/audio/HolyDroneTempleHighAsShit__1.mp3"
   },
   {
     "title": "HypnoFields",
@@ -40,12 +104,36 @@
     "file": "/audio/Moffe.mp3"
   },
   {
+    "title": "NeoPopDanny 2 1",
+    "file": "/audio/NeoPopDanny_2_1.mp3"
+  },
+  {
     "title": "NeptuniaSpaceStation",
     "file": "/audio/NeptuniaSpaceStation.mp3"
   },
   {
+    "title": "NewRotations  1",
+    "file": "/audio/NewRotations__1.mp3"
+  },
+  {
+    "title": "OUTROMASTER",
+    "file": "/audio/OUTROMASTER.mp3"
+  },
+  {
+    "title": "OilPingSlam  1",
+    "file": "/audio/OilPingSlam__1.mp3"
+  },
+  {
     "title": "OliveRain",
     "file": "/audio/OliveRain.mp3"
+  },
+  {
+    "title": "PhaseSlam 2 1",
+    "file": "/audio/PhaseSlam_2_1.mp3"
+  },
+  {
+    "title": "ReelQuickShot ",
+    "file": "/audio/ReelQuickShot_.mp3"
   },
   {
     "title": "SherryCove",
@@ -96,6 +184,18 @@
     "file": "/audio/coffee.mp3"
   },
   {
+    "title": "exyak",
+    "file": "/audio/exyak.mp3"
+  },
+  {
+    "title": "gum3000",
+    "file": "/audio/gum3000.mp3"
+  },
+  {
+    "title": "lll",
+    "file": "/audio/lll.mp3"
+  },
+  {
     "title": "omgremixcover",
     "file": "/audio/omgremixcover.mp3"
   },
@@ -104,7 +204,23 @@
     "file": "/audio/passerby.mp3"
   },
   {
+    "title": "pianointerlude",
+    "file": "/audio/pianointerlude.mp3"
+  },
+  {
     "title": "power 13",
     "file": "/audio/power_13.mp3"
+  },
+  {
+    "title": "sculptexp",
+    "file": "/audio/sculptexp.mp3"
+  },
+  {
+    "title": "slowdepartture",
+    "file": "/audio/slowdepartture.mp3"
+  },
+  {
+    "title": "time",
+    "file": "/audio/time.mp3"
   }
 ]
