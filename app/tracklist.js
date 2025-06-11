@@ -9,6 +9,7 @@ export default function TrackList({ setIsLoading }) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [showIntroAnimation, setShowIntroAnimation] = useState(true);
+    const [shuffledHistory, setShuffledHistory] = useState([]);
     const audioRef = useRef(null);
 
     useEffect(() => {
@@ -43,11 +44,18 @@ export default function TrackList({ setIsLoading }) {
         loadManifest();
     }, []);
 
+    useEffect(() => {
+        if (!isShuffling) setShuffledHistory([]);
+    }, [isShuffling]);
+    
+
     const playTrack = (index) => {
         if (!audioRef.current || index == null) return;
         audioRef.current.src = tracks[index].file;
         audioRef.current.play();
         setCurrentTrackIndex(index);
+        if(shuffledHistory.length===tracks.length-1) setShuffledHistory([])
+        else setShuffledHistory([...shuffledHistory,index])
     };
 
     const nextTrack = () => {
@@ -55,9 +63,10 @@ export default function TrackList({ setIsLoading }) {
         if (isShuffling) {
             if (tracks.length <= 1) return; // nothing else to shuffle
             let randomIndex;
+
             do {
                 randomIndex = Math.floor(Math.random() * tracks.length);
-            } while (randomIndex === currentTrackIndex);
+            } while (randomIndex === currentTrackIndex || shuffledHistory.includes(randomIndex));
             playTrack(randomIndex);
         }
         else {
@@ -73,7 +82,7 @@ export default function TrackList({ setIsLoading }) {
 
     return (
         <>
-            {!showIntroAnimation && <AnimatedText className={`self-end font-mono tracking-widest lg:mt-50  mb-6 select-none ${isPlaying? 'animate-pulse':''}`} />}
+            {!showIntroAnimation && <AnimatedText className={`self-end font-mono tracking-widest px-4 lg:mt-50 mt-25 mb-6 select-none ${isPlaying? 'animate-pulse':''}`} />}
             <div className="grid w-full">
                 {tracks.map((track, index) => (
                     <button

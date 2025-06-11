@@ -86,11 +86,11 @@ export default function FooterPlayer({
 
     return (
         <div className="fixed bottom-0 left-0 right-0 px-4 py-2 z-50 backdrop-blur-xs select-none font-semibold">
-            <div className="flex items-center justify-between gap-4 flex-wrap">
+            <div className="flex items-center justify-between gap-4">
 
 
                 {/* Controls */}
-                <div className="flex items-center gap-2 ">
+                <div className="pl-2 flex items-center gap-2 ">
                     <button className="cursor-pointer hover:animate-pulse" onClick={onPrev} title="Previous">«</button>
                     <button
                         onClick={togglePlay}
@@ -103,8 +103,13 @@ export default function FooterPlayer({
                   
                 </div>
 
-
-
+                <button
+                    onClick={() => setIsShuffling((s) => !s)}
+                    title="Shuffle"
+                    className={`cursor-pointer font-light mr-1 ml-1 hover:animate-pulse ${isShuffling && 'font-semibold'}`}
+                >
+                    shuffle
+                </button>
 
                 {/* Track Info */}
                 <div className="flex-1 min-w-[200px]">
@@ -128,13 +133,7 @@ export default function FooterPlayer({
                         {format(progress)} / {format(duration)}
                     </div>
                 </div>
-                <button
-                    onClick={() => setIsShuffling((s) => !s)}
-                    title="Shuffle"
-                    className={`cursor-pointer font-light mr-1 ml-1 hover:animate-pulse ${isShuffling && 'font-semibold'}`}
-                >
-                    shuffle
-                </button>
+                
                
         
                 
