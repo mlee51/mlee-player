@@ -18,7 +18,7 @@ export default function Home() {
         )}
         <TrackList setIsLoading={setIsLoading} />
       </main>
-      {!isLoading && <footer className="row-start-3 h-50 flex gap-[24px] flex-wrap items-center justify-center">
+      {!isLoading && <footer className="mb-20 row-start-3 h-50 flex gap-[24px] flex-wrap items-center justify-center">
        <a className="animate-pulse font-semibold" href="https://instagram.com/mlee.live" target="_blank">{'<3'}</a>
       </footer>}
     </div>
