@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 export default function AnimatedText({
   content = "radio.mlee.live.x.x.x.",
   speed = 150,
-  className = "self-end pr-3 font-mono tracking-wide",
+  className = "self-end font-mono tracking-wide",
 }) {
   const [text, setText] = useState(content);
 

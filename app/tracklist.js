@@ -73,15 +73,15 @@ export default function TrackList({ setIsLoading }) {
 
     return (
         <>
-            {!showIntroAnimation && <AnimatedText className={isPlaying? 'animate-pulse self-end pr-3 font-mono tracking-wide':'self-end pr-3 font-mono tracking-wide'} />}
-            <div className="grid w-full pb-24">
+            {!showIntroAnimation && <AnimatedText className={`self-end font-mono tracking-widest lg:mt-50  mb-6 select-none ${isPlaying? 'animate-pulse':''}`} />}
+            <div className="grid w-full">
                 {tracks.map((track, index) => (
                     <button
                         key={index}
                         onClick={() => playTrack(index)}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
-                        className={`grid grid-cols-[1fr_auto] gap-x-1 w-full text-left py-1 rounded ${index%2===0? "gradient":""} hover:backdrop-blur-xs hover:font-semibold ${currentTrackIndex === index ? "backdrop-blur-xs font-semibold animate-pulse" : ""
+                        className={`grid grid-cols-[1fr_auto] gap-x-1 w-full text-left py-1 rounded ${index%2===0? "":"gradient"} ${currentTrackIndex === index ? "backdrop-blur-xs animate-pulse font-semibold tracking-widest" : ""
                             }`}
                     >
                         <span>

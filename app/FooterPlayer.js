@@ -85,22 +85,22 @@ export default function FooterPlayer({
     if (!track) return null;
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 px-4 py-2 z-50 shadow-md backdrop-blur-xs  select-none">
+        <div className="fixed bottom-0 left-0 right-0 px-4 py-2 z-50 backdrop-blur-xs select-none font-semibold">
             <div className="flex items-center justify-between gap-4 flex-wrap">
 
 
                 {/* Controls */}
                 <div className="flex items-center gap-2 ">
-                    <button onClick={onPrev} title="Previous">«</button>
+                    <button className="cursor-pointer hover:animate-pulse" onClick={onPrev} title="Previous">«</button>
                     <button
                         onClick={togglePlay}
                         title="Play/Pause"
-                        className="w-6 flex-auto -translate-x-px"
+                        className="w-6 flex-auto -translate-x-px cursor-pointer hover:animate-pulse"
                     >
                         {isPlaying ? "||" : ">"}
                     </button>
 
-                    <button onClick={onNext} title="Next">»</button>
+                  
                 </div>
 
 
@@ -126,19 +126,20 @@ export default function FooterPlayer({
                         {format(progress)} / {format(duration)}
                     </div>
                 </div>
-
+        
                 <button
                     onClick={() => setIsShuffling((s) => !s)}
                     title="Shuffle"
-                    className={`mr-1 ml-1 ${isShuffling && 'font-semibold'}`}
+                    className={`cursor-pointer font-light mr-1 ml-1 hover:animate-pulse ${isShuffling && 'font-semibold'}`}
                 >
                     shuffle
                 </button>
+                <button className="cursor-pointer" onClick={onNext} title="Next">»</button>
                 {/* Volume */}
-                <div className="flex items-center gap-2 min-w-[120px]">
-                    <label onClick={() => setVolume(volume !== 0 ? 0 : 1)}>vol</label>
+                <div className="flex items-center gap-2 min-w-[120px] hover:animate-pulse">
+                    <label className="cursor-pointer" onClick={() => setVolume(volume !== 0 ? 0 : 1)}>vol</label>
                     <input
-                        className="volume opacity-40"
+                        className="volume opacity-40 cursor-pointer "
                         type="range"
                         min={0}
                         max={1}

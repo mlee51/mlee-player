@@ -7,8 +7,8 @@ import AnimatedText from "./AnimatedText";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-stretch sm:items-start w-1/2">
+    <div className="grid items-center justify-items-center min-h-screen ">
+      <main className="lg:w-[23%] w-[96%] flex flex-col row-start-2 items-stretch sm:items-start">
         {isLoading && (
           <div className="fixed inset-0 flex items-center justify-center z-50">
             <div className=" text-xl font-mono animate-pulse">
@@ -18,9 +18,9 @@ export default function Home() {
         )}
         <TrackList setIsLoading={setIsLoading} />
       </main>
-      {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        Player
-      </footer> */}
+      <footer className="row-start-3 h-50 flex gap-[24px] flex-wrap items-center justify-center">
+       
+      </footer>
     </div>
   );
 }
