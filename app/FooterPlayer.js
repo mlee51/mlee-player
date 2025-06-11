@@ -95,11 +95,11 @@ export default function FooterPlayer({
                     <button
                         onClick={togglePlay}
                         title="Play/Pause"
-                        className="w-6 flex-auto -translate-x-px cursor-pointer hover:animate-pulse"
+                        className="w-6 flex-auto text-center -translate-x-px cursor-pointer hover:animate-pulse"
                     >
-                        {isPlaying ? "||" : ">"}
+                        {isPlaying ? "❚❚" : "▶"}
                     </button>
-
+                    <button className="cursor-pointer" onClick={onNext} title="Next">»</button>
                   
                 </div>
 
@@ -108,9 +108,11 @@ export default function FooterPlayer({
 
                 {/* Track Info */}
                 <div className="flex-1 min-w-[200px]">
+                    
                     <div className="font-medium truncate mb-[2px]">
                         {isPlaying ? <AnimatedText className='font-semibold' content={track.title} /> : track.title}
                     </div>
+                    
                     <div
                         ref={progressBarRef}
                         className="h-2 border opacity-40 cursor-pointer w-full m-0"
@@ -126,7 +128,6 @@ export default function FooterPlayer({
                         {format(progress)} / {format(duration)}
                     </div>
                 </div>
-        
                 <button
                     onClick={() => setIsShuffling((s) => !s)}
                     title="Shuffle"
@@ -134,9 +135,11 @@ export default function FooterPlayer({
                 >
                     shuffle
                 </button>
-                <button className="cursor-pointer" onClick={onNext} title="Next">»</button>
+               
+        
+                
                 {/* Volume */}
-                <div className="flex items-center gap-2 min-w-[120px] hover:animate-pulse">
+                <div className="hidden lg:flex items-center gap-2 min-w-[120px] hover:animate-pulse">
                     <label className="cursor-pointer" onClick={() => setVolume(volume !== 0 ? 0 : 1)}>vol</label>
                     <input
                         className="volume opacity-40 cursor-pointer "
