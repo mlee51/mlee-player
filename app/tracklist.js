@@ -14,35 +14,16 @@ export default function TrackList({ setIsLoading }) {
 
     useEffect(() => {
         const loadManifest = async () => {
-            const res = await fetch("/audio/manifest.json");
-            const data = await res.json();
-
-            const withDurations = await Promise.all(
-                data.map((track) => {
-                    return new Promise((resolve) => {
-                        const audio = new Audio(track.file);
-                        audio.addEventListener("loadedmetadata", () => {
-                            const duration = audio.duration;
-                            const minutes = Math.floor(duration / 60);
-                            const seconds = Math.floor(duration % 60)
-                                .toString()
-                                .padStart(2, "0");
-                            resolve({ ...track, duration: `${minutes}:${seconds}` });
-                        });
-                        audio.addEventListener("error", () => {
-                            resolve({ ...track, duration: "unknown" });
-                        });
-                    });
-                })
-            );
-
-            setTracks(withDurations);
-            if (typeof setIsLoading === "function") setIsLoading(false);
-            setShowIntroAnimation(false)
+          const res = await fetch("/audio/manifest.json");
+          const data = await res.json();
+      
+          setTracks(data);
+          if (typeof setIsLoading === "function") setIsLoading(false);
+          setShowIntroAnimation(false);
         };
-
+      
         loadManifest();
-    }, []);
+      }, []);
 
     useEffect(() => {
         if (!isShuffling) setShuffledHistory([]);
