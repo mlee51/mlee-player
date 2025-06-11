@@ -1,5 +1,9 @@
 [
   {
+    "title": "10072024dnb",
+    "file": "/audio/10072024dnb.mp3"
+  },
+  {
     "title": "AfterImageClubMASTER",
     "file": "/audio/AfterImageClubMASTER.mp3"
   },
@@ -92,6 +96,10 @@
     "file": "/audio/HypnoFields.mp3"
   },
   {
+    "title": "LAWNMOWER",
+    "file": "/audio/LAWNMOWER.mp3"
+  },
+  {
     "title": "LOVINGCYBER 32",
     "file": "/audio/LOVINGCYBER_32.mp3"
   },
@@ -134,6 +142,10 @@
   {
     "title": "ReelQuickShot ",
     "file": "/audio/ReelQuickShot_.mp3"
+  },
+  {
+    "title": "SPINCYCLE",
+    "file": "/audio/SPINCYCLE.mp3"
   },
   {
     "title": "SherryCove",
@@ -180,12 +192,40 @@
     "file": "/audio/YourSide.mp3"
   },
   {
+    "title": "bassportoshit",
+    "file": "/audio/bassportoshit.mp3"
+  },
+  {
+    "title": "bloom ost",
+    "file": "/audio/bloom_ost.mp3"
+  },
+  {
     "title": "coffee",
     "file": "/audio/coffee.mp3"
   },
   {
+    "title": "cyber s1",
+    "file": "/audio/cyber_s1.mp3"
+  },
+  {
+    "title": "dnb12",
+    "file": "/audio/dnb12.mp3"
+  },
+  {
+    "title": "drift ost",
+    "file": "/audio/drift_ost.mp3"
+  },
+  {
     "title": "exyak",
     "file": "/audio/exyak.mp3"
+  },
+  {
+    "title": "fauna",
+    "file": "/audio/fauna.mp3"
+  },
+  {
+    "title": "globs S2",
+    "file": "/audio/globs_S2.mp3"
   },
   {
     "title": "gum3000",
@@ -196,8 +236,16 @@
     "file": "/audio/lll.mp3"
   },
   {
+    "title": "meldshit",
+    "file": "/audio/meldshit.mp3"
+  },
+  {
     "title": "omgremixcover",
     "file": "/audio/omgremixcover.mp3"
+  },
+  {
+    "title": "ost clocks3",
+    "file": "/audio/ost_clocks3.mp3"
   },
   {
     "title": "passerby",
@@ -212,6 +260,10 @@
     "file": "/audio/power_13.mp3"
   },
   {
+    "title": "razorisbackbaby",
+    "file": "/audio/razorisbackbaby.mp3"
+  },
+  {
     "title": "sculptexp",
     "file": "/audio/sculptexp.mp3"
   },
@@ -220,7 +272,23 @@
     "file": "/audio/slowdepartture.mp3"
   },
   {
+    "title": "submersible",
+    "file": "/audio/submersible.mp3"
+  },
+  {
     "title": "time",
     "file": "/audio/time.mp3"
+  },
+  {
+    "title": "viruschorcookD",
+    "file": "/audio/viruschorcookD.mp3"
+  },
+  {
+    "title": "viruschorcookVocals",
+    "file": "/audio/viruschorcookVocals.mp3"
+  },
+  {
+    "title": "wonderville",
+    "file": "/audio/wonderville.mp3"
   }
 ]
