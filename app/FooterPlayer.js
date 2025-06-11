@@ -103,16 +103,9 @@ export default function FooterPlayer({
                   
                 </div>
 
-                <button
-                    onClick={() => setIsShuffling((s) => !s)}
-                    title="Shuffle"
-                    className={`cursor-pointer font-light mr-1 ml-1 hover:animate-pulse ${isShuffling && 'font-semibold'}`}
-                >
-                    shuffle
-                </button>
-
+               
                 {/* Track Info */}
-                <div className="flex-1 min-w-[200px] mr-4 lg:mr-0">
+                <div className="flex-1 min-w-[200px] lg:mr-0">
                     
                     <div className="font-medium truncate mb-[2px]">
                         {isPlaying ? <AnimatedText className='font-semibold' content={track.title} /> : track.title}
@@ -134,7 +127,14 @@ export default function FooterPlayer({
                     </div>
                 </div>
                 
-               
+                <button
+                    onClick={() => setIsShuffling((s) => !s)}
+                    title="Shuffle"
+                    className={`cursor-pointer font-light mr-1 ml-1 hover:animate-pulse ${isShuffling && 'font-semibold'}`}
+                >
+                    shuffle
+                </button>
+
         
                 
                 {/* Volume */}
