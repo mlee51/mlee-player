@@ -95,7 +95,7 @@ export default function FooterPlayer({
                     <button
                         onClick={togglePlay}
                         title="Play/Pause"
-                        className="w-6 flex-auto text-center -translate-x-px cursor-pointer hover:animate-pulse"
+                        className="w-6 flex-auto text-center cursor-pointer hover:animate-pulse"
                     >
                         {isPlaying ? "❚❚" : "▶"}
                     </button>
@@ -112,7 +112,7 @@ export default function FooterPlayer({
                 </button>
 
                 {/* Track Info */}
-                <div className="flex-1 min-w-[200px]">
+                <div className="flex-1 min-w-[200px] mr-4 lg:mr-0">
                     
                     <div className="font-medium truncate mb-[2px]">
                         {isPlaying ? <AnimatedText className='font-semibold' content={track.title} /> : track.title}
