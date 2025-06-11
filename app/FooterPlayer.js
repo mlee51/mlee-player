@@ -86,7 +86,7 @@ export default function FooterPlayer({
 
     return (
         <div className="fixed bottom-0 left-0 right-0 px-4 py-2 z-50 backdrop-blur-xs select-none font-semibold">
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center pr-2 justify-between gap-4">
 
 
                 {/* Controls */}
