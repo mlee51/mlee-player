@@ -91,15 +91,15 @@ export default function FooterPlayer({
 
                 {/* Controls */}
                 <div className="flex items-center gap-2 ">
-                    <button className="cursor-pointer hover:animate-pulse" onClick={onPrev} title="Previous">«</button>
+                    <button className="cursor-pointer hover:animate-pulse" onClick={onPrev} >«</button>
                     <button
                         onClick={togglePlay}
-                        title="Play/Pause"
+                       
                         className="w-6 flex-auto text-center cursor-pointer hover:animate-pulse"
                     >
                         {isPlaying ? "❚❚" : "▶"}
                     </button>
-                    <button className="cursor-pointer" onClick={onNext} title="Next">»</button>
+                    <button className="cursor-pointer" onClick={onNext}>»</button>
                   
                 </div>
 
@@ -118,7 +118,7 @@ export default function FooterPlayer({
                     >
 
                         <div
-                            className="h-2 bg-foreground"
+                            className="h-1.5 bg-foreground"
                             style={{ width: `${(progress / (duration || 1)) * 100}%` }}
                         />
                     </div>
@@ -129,7 +129,7 @@ export default function FooterPlayer({
                 
                 <button
                     onClick={() => setIsShuffling((s) => !s)}
-                    title="Shuffle"
+                  
                     className={`cursor-pointer font-light mr-1 ml-1 hover:animate-pulse ${isShuffling && 'font-semibold'}`}
                 >
                     shuffle

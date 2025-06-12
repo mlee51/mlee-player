@@ -6,6 +6,19 @@ import AnimatedText from "./AnimatedText";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const baseTitle = "☆ﾟ.*･｡ﾟ";
+    let index = 0;
+
+    const interval = setInterval(() => {
+      document.title = baseTitle.slice(index) + baseTitle.slice(0, index);
+      index = (index - 1) % baseTitle.length;
+    }, 200); // Speed in ms
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
   return (
     <div className="grid items-center justify-items-stretch min-h-screen ">
       <main className="flex flex-col row-start-2 items-stretch sm:items-start">
