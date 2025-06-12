@@ -4,8 +4,8 @@
 
   --foreground: #ffffff;
   background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 58%);
-  background-size: 100% 200%;
-  animation: gradient 50s ease infinite;
+  background-size: 200% 300%;
+  animation: gradient 20s ease infinite;
   /* height: 100vh; */
   
 background-attachment: fixed;
@@ -21,13 +21,14 @@ body {
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 50% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 50% 100%;
+
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 50% 0%;
   }
 }
 
@@ -38,13 +39,6 @@ body {
   --font-mono: var(--font-doto);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-start: #0a0a0a;
-    --background-end: #1a1a1a;
-    --foreground: #ededed;
-  }
-}
 
 body {
  

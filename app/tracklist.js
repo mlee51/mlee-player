@@ -71,10 +71,10 @@ export default function TrackList({ setIsLoading }) {
                         onClick={() => playTrack(index)}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
-                        className={`grid grid-cols-[1fr_auto] px-4 gap-x-1 overflow-x-hidden whitespace-nowrap w-full hover:font-semibold text-left py-1 rounded ${index%2===0? "":"gradient"} ${currentTrackIndex === index ? "backdrop-blur-xl animate-pulse font-semibold tracking-widest" : ""
+                        className={`grid grid-cols-[1fr_auto] px-4 gap-x-1 w-full hover:font-semibold text-left py-1 rounded ${index%2===0? "":"gradient"} ${currentTrackIndex === index ? "backdrop-blur-xl animate-pulse font-semibold tracking-widest" : ""
                             }`}
                     >
-                        <span>
+                        <span className="overflow-hidden whitespace-nowrap ">
                             {hoveredIndex === index || (index === currentTrackIndex && isPlaying)
                                 ? <AnimatedText content={track.title} />
                                 : track.title}
