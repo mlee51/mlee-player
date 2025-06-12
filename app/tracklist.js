@@ -71,7 +71,7 @@ export default function TrackList({ setIsLoading }) {
                         onClick={() => playTrack(index)}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
-                        className={`grid grid-cols-[1fr_auto] px-4 gap-x-1 w-full hover:font-semibold text-left py-1 rounded ${index%2===0? "":"gradient"} ${currentTrackIndex === index ? "backdrop-blur-xl animate-pulse font-semibold tracking-widest" : ""
+                        className={`grid grid-cols-[1fr_auto] px-4 gap-x-1 whitespace-nowrap w-full hover:font-semibold text-left py-1 rounded ${index%2===0? "":"gradient"} ${currentTrackIndex === index ? "backdrop-blur-xl animate-pulse font-semibold tracking-widest" : ""
                             }`}
                     >
                         <span>
