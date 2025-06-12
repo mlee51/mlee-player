@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 const doto = Doto({
   variable: "--font-doto",
   subsets: ["latin"],
-  weight: ["300"], // Or 'variable' if using the variable font
+  weight: ["400"], // Or 'variable' if using the variable font
 });
 
 const roboto = Roboto({
   variable: '--font-roboto',
-  weight: '400',
+  weight: '500',
   subsets: ['latin'],
 });
 
